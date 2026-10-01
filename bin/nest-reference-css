@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+# Writes config/reference_css_nested.php: config/reference_css.php where each condition key refers to a CssStylesNested shape instead of array<string, mixed>.
+
+set -eu
+cd "$(dirname "$0")/.."
+
+awk '
+/^ \* @psalm-type CssStyles = array\{$/ { in_shape = 1 }
+in_shape {
+    nested = nested $0 "\n"
+    line = $0
+    sub(/\?: array<string, mixed>,$/, "?: CssStylesNested,", line)
+    print line
+    if ($0 == " * }") {
+        in_shape = 0
+        sub(/CssStyles =/, "CssStylesNested =", nested)
+        printf "%s", nested
+    }
+    next
+}
+{ print }
+' config/reference_css.php > config/reference_css_nested.php
