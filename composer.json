@@ -5,30 +5,8 @@
     "prefer-stable": true,
     "repositories": {
         "symfony/ux-css": {
-            "type": "package",
-            "package": {
-                "name": "symfony/ux-css",
-                "version": "dev-feat/ux-css",
-                "type": "symfony-bundle",
-                "description": "symfony/ux-css from https://github.com/symfony/ux/pull/3933, at commit 3775f2ad20047c49fed7e798924d09f65e97a63e",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/symfony/ux/archive/3775f2ad20047c49fed7e798924d09f65e97a63e.zip",
-                    "reference": "3775f2ad20047c49fed7e798924d09f65e97a63e"
-                },
-                "autoload": {
-                    "psr-4": {
-                        "Symfony\\UX\\Css\\": "src/Css/src/"
-                    }
-                },
-                "require": {
-                    "php": ">=8.4",
-                    "symfony/config": "^7.4|^8.0",
-                    "symfony/dependency-injection": "^7.4|^8.0",
-                    "symfony/http-kernel": "^7.4|^8.0",
-                    "twig/twig": "^3.24|^4.0"
-                }
-            }
+            "type": "path",
+            "url": "../../symfony/ux/src/Css"
         }
     },
     "require": {

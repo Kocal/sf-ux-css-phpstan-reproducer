@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ca61dcce401708582931bdb3a62070b",
+    "content-hash": "695ec94d162b7e6b7d82b4403212b3f7",
     "packages": [
         {
             "name": "psr/cache",
@@ -2622,9 +2622,9 @@
             "name": "symfony/ux-css",
             "version": "dev-feat/ux-css",
             "dist": {
-                "type": "zip",
-                "url": "https://github.com/symfony/ux/archive/3775f2ad20047c49fed7e798924d09f65e97a63e.zip",
-                "reference": "3775f2ad20047c49fed7e798924d09f65e97a63e"
+                "type": "path",
+                "url": "../../symfony/ux/src/Css",
+                "reference": "8a0b3e27bb7a3e65960a6162127abcd2a4e0afda"
             },
             "require": {
                 "php": ">=8.4",
@@ -2633,13 +2633,61 @@
                 "symfony/http-kernel": "^7.4|^8.0",
                 "twig/twig": "^3.24|^4.0"
             },
+            "require-dev": {
+                "phpbench/phpbench": "^1.7",
+                "phpstan/phpstan": "^2.1.39",
+                "phpunit/phpunit": "^11.1|^12.0",
+                "symfony/asset-mapper": "^7.4|^8.0",
+                "symfony/console": "^7.4|^8.0",
+                "symfony/error-handler": "^7.4.17|^8.1.5",
+                "symfony/framework-bundle": "^7.4|^8.0",
+                "symfony/process": "^7.4|^8.0",
+                "symfony/twig-bundle": "^7.4|^8.0",
+                "symfony/yaml": "^7.4|^8.0"
+            },
             "type": "symfony-bundle",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\UX\\Css\\": "src/Css/src/"
+            "extra": {
+                "thanks": {
+                    "name": "symfony/ux",
+                    "url": "https://github.com/symfony/ux"
                 }
             },
-            "description": "symfony/ux-css from https://github.com/symfony/ux/pull/3933, at commit 3775f2ad20047c49fed7e798924d09f65e97a63e"
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\UX\\Css\\": "src/"
+                },
+                "exclude-from-classmap": []
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Symfony\\UX\\Css\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hugo Alliaume",
+                    "email": "hugo@alliau.me"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Typed atomic CSS for Twig, driven by design tokens and validated at compile time",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "atomic-css",
+                "css",
+                "design-tokens",
+                "symfony-ux",
+                "twig"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/var-dumper",
