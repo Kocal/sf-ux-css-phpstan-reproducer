@@ -8,6 +8,7 @@
         {% endblock %}
 
         {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
 
         {% set frankenphp_hot_reload = app.request.server.get('FRANKENPHP_HOT_RELOAD') %}
@@ -19,5 +20,17 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+         <button class="{{ css({
+             color: 'red.50',
+             bg: 'black',
+             _hover: {
+                 color: 're',
+                 bg: 'blue.500',
+                 filter: 'auto',
+                 blur: '10px',
+             }
+         }) }}">
+             test
+         </button>
     </body>
 </html>
